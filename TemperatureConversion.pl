@@ -9,46 +9,44 @@
 ####################################
 
 use strict;
-use warnings; 
+use warnings;
+use integer;
 
 #Variables 
-my $temp;
-my $cel;
-my $fahr;
+my $temp = 0;
+my $cel = 0;
+my $fahr = 0;
 my $choice; 
-
-#Conversion Function
-$cel = ($temp - 32 * 5 / 9;
-$fahr = ($temp * (9 /5 )) +32;
 
 #User Input
 print "\n";
 print " 1) Fahrenheit";
-print "/n";
+print "\n";
 print " 2) Celsius";
-print "/n";
-print "Enter Choice: "
-$Choice = <STDIN>;
-print "/n";
+print "\n";
+print "Enter Choice: ";
+$choice = <STDIN>;
+print "\n";
 print "Enter Temperature: ";
 $temp = <STDIN>;
 print "\n";
 
 #Checking User Input
+#Displaying Output
 if($choice == 1){
 
-	print "The Temperature you entered is: " . $temp . " °F";
-	print "/n";
-	$temp = $cel;
-	print "The Converted Temperature is: " . $cel . " °C";
-	print "/n";
+	print "The Temperature you entered is: " . $temp . " F";
+	print "\n";
+    $cel = ($temp - 32) * 5 / 9;
+	print "The Converted Temperature is: " .  $cel . " C";
+	print "\n";
 	}
 	
 if($choice == 2){
 		
-	print "The Temperature you entered is: " . $temp . " °C";
-	print "/n";
-	$temp = $fahr;
-	print "The Converted Temperature is: " . $fahr . " °F";
-	print "/n";
+	print "The Temperature you entered is: " . $temp . " C";
+	print "\n";
+	$fahr = ($temp * (9 / 5)) + 32;
+	print "The Converted Temperature is: " . $fahr . " F";
+	print "\n";
 	}
